@@ -1,0 +1,13 @@
+/* transfer.css */
+
+.container2 {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 600px;
+  height: 350px;
+  position: absolute;
+  top: 220px; /* Add top margin to move the container down */
+  left: 50%; /* Center the container horizontally */
+  transform: translateX(-50%); /* Adjust for the container's width */
+}

@@ -1,0 +1,47 @@
+.container-transaction {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 800px;
+    height: 440px;
+    position: absolute;
+    top: 120px; /* Add top margin to move the container down */
+    left: 50%; /* Center the container horizontally */
+    transform: translateX(-50%); /* Adjust for the container's width */
+    margin-left: 100px;
+    overflow: auto; /* Hide any overflow beyond the container */
+     }
+
+     table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .body td {
+      padding: 12px,20px,1px;
+      text-align: left;
+    
+    }
+    
+    tr:last-child td {
+      border-bottom: none; /* Remove the bottom border for the last row */
+    }
+    
+    .negative-amount {
+      color: red;
+    }
+    
+    .positive-amount {
+      color: green;
+    }
+   /* ... (previous styles) */
+
+.to-suffix {
+    color: red;
+  }
+  
+  .from-suffix {
+    color: green;
+  }
+  
+  /* ... (rest of the styles) */
+  
