@@ -31,7 +31,7 @@ export default function Transaction() {
 
 
   return (
-    <div className="container-transaction">
+    <div className="container-transactions">
       <div className="header">
         <table>
           <thead>
