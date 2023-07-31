@@ -40,7 +40,7 @@ export default function Navbar({ isLoggedIn,user, handleLogout,isAdminLoggedIn,a
   <div className="container-fluid">
     <a className="navbar-brand" href="/">
     <img src="/bank2.png" alt="Brand Logo" width="50" height="50" />
-    Nidhi Bank</a>
+    Ni Bank</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
