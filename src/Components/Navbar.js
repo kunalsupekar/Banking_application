@@ -62,7 +62,7 @@ export default function Navbar({ isLoggedIn,user, handleLogout,isAdminLoggedIn,a
        {/* Conditional rendering for Create Account */}
        {!isLoggedIn && !isAdminLoggedIn && (
             <li className="nav-item">
-              <Link className="nav-link" to="/create-account">
+              <Link className="nav-link" to="/add">
                 Create Account
               </Link>
             </li>
