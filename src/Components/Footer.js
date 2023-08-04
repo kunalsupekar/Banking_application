@@ -4,7 +4,7 @@ import {
   faHome,
   faEnvelope,
   faPhone,
-  faPrint
+  faPrint,faUser
 } from '@fortawesome/free-solid-svg-icons';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -150,6 +150,13 @@ export default function Footer() {
                 <FontAwesomeIcon icon={faPrint} className="me-3 text-secondary" />
                 +91 87676 55747
               </p>
+              <p>
+                <FontAwesomeIcon icon={faUser} className="me-3 text-secondary" />
+                Kunal Supekar
+              
+                
+              </p>
+                <p>Abhishek Bhosale</p>
             </div>
           </div>
         </div>
