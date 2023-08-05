@@ -38,6 +38,12 @@ export default function Sidebar() {
             </a>
           </li>
           <li>
+            <Link to="deposit" className="nav-link link-body-emphasis">
+              <i  className="fa-solid fa-money-bill-transfer "/>
+              Deposit Money
+            </Link>
+          </li>
+          <li>
             <a href="/" className="nav-link link-body-emphasis">
               <i className="fa  fa-hand-holding-usd me-2" />
               Loan & insurances

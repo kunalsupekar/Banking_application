@@ -67,7 +67,7 @@ export default function Login({ handleLogin}) {
     alignItems: 'center',marginBottom:'200px',marginTop:'120px' }}>
     <div className="container d-flex justify-content-center align-items-center vh-70" >
       <form className="login-form p-4 rounded shadow" onSubmit={handleLogin1}>
-        <h2 className="text-center mb-4">Welome User</h2>
+        <h2 className="text-center mb-4">Welcome User</h2>
 
         <div className="form-group mb-6">
           <div className="input-group">

@@ -1,36 +1,74 @@
 .container-transactions {
-    background-color: #f7f7f7;
-    border: 1px solid #ccc;
-    padding: 20px;
-    width: 600px;
-    height: 300px;
-    position: absolute;
-    top: 220px; /* Add top margin to move the container down */
-    left: 50%; /* Center the container horizontally */
-    transform: translateX(-50%); /* Adjust for the container's width */
-    margin-left: 100px;
-    overflow: auto; /* Hide any overflow beyond the container */
-     }
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 800px; /* Adjust the width of the container */
+  height: 400px; /* Adjust the height of the container */
+  position: absolute;
+  top: 220px; /* Add top margin to move the container down */
+  left: 50%; /* Center the container horizontally */
+  transform: translateX(-50%); /* Adjust for the container's width */
+  margin-left: 100px;
+  overflow: auto; /* Hide any overflow beyond the container */
+}
 
-     table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .body td {
-      padding: 12px,20px,1px;
-      text-align: left;
-    
-    }
-    
-    tr:last-child td {
-      border-bottom: none; /* Remove the bottom border for the last row */
-    }
-    
-    .negative-amount {
-      color: red;
-    }
-    
-    .positive-amount {
-      color: green;
-    }
-    
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Apply styles to the table header in web and PDF */
+thead th, .pdf-table-header {
+  background-color: #f2f2f2;
+  padding: 12px;
+  text-align: left;
+}
+
+/* Apply styles to the table data cells in web and PDF */
+tbody td, .pdf-table-cell {
+  padding: 1px;
+  text-align: left;
+}
+
+/* Remove the bottom border for the last row */
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.negative-amount {
+  color: red;
+}
+
+.positive-amount {
+  color: green;
+}
+
+.green-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Add styles for the PDF table */
+.pdf-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Apply styles to the table rows in PDF */
+.pdf-table-row {
+  padding: 8px;
+}
+
+/* Apply styles to the table cells in PDF */
+.pdf-table-cell {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
