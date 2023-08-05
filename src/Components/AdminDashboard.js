@@ -6,6 +6,8 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import ViewCustomers from './ViewCustomers';
 import { Route, Routes } from 'react-router-dom';
 import AdminTransaction from './AdminTransaction';
+import AdminLoans from './AdminLoans';
+import Deleteuser from './Deleteuser';
 
 
 
@@ -34,7 +36,7 @@ export default function AdminDashboard() {
                </li>
 
                <li>
-                 <Link to=" " className="nav-link link-body-emphasis">
+                 <Link to="loansapplied" className="nav-link link-body-emphasis">
                    <i className="fa fa-address-book me-2" />
                   Loan Applications
                  </Link>
@@ -69,8 +71,9 @@ export default function AdminDashboard() {
          <Routes>
      <Route path="/view" element={<ViewCustomers/>} />
       <Route path="/transaction" element={<AdminTransaction/>} />
-     </Routes>
-      
+      <Route path="/loansapplied" element={<AdminLoans/>} />
+      <Route path="/delete" element={<Deleteuser/>} />
+     </Routes>         
      </div>
         </>
        )
