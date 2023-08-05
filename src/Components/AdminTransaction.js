@@ -2,8 +2,45 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './AdminTransaction.css';
 import base_url1 from '../API/URL';
+import jsPDF from 'jspdf';
+import 'jspdf-autotable'; // Import the autoTable plugin
 
 export default function AdminTransaction() {
+
+
+   // Function to handle PDF download
+   const handleDownloadPDF = () => {
+    // Create a new PDF document
+    const doc = new jsPDF();
+
+    // Set the title for the PDF document
+    doc.text('Transaction History', 10, 10);
+
+    // Prepare data for the table
+    const tableData = transactions.map(transaction => [
+      transaction.name,
+      transaction.amount,
+      transaction.amount < 0 ? 'Debit' : 'Credit',
+      new Date(transaction.transactionDateTime).toLocaleString(),
+    ]);
+
+    // Define table headers
+    const headers = ['Name', 'Amount', 'Transaction Type', 'Date & Time'];
+
+    // Add the table to the PDF
+    doc.autoTable({
+      head: [headers],
+      body: tableData,
+      startY: 20,
+    });
+
+    // Save the PDF and trigger the download
+    doc.save('Alltransactions.pdf');
+  };
+
+
+  
+
   const [transactions, setTransactions] = useState([]);
 
   useEffect(() => {
@@ -59,6 +96,9 @@ export default function AdminTransaction() {
           </tbody>
         </table>
       </div>
+      <button style={{ backgroundColor: 'green', color: 'white' }} onClick={handleDownloadPDF}>
+        Download All Transactions
+      </button>
     </div>
   );
 }

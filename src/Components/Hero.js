@@ -2,7 +2,7 @@ import React from 'react'
 import { Link} from 'react-router-dom';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 
-export default function Hero() {
+export default function Herohref() {
   const CustomCard = ({ title, image, description }) => (
   <Col sm={6} md={4} lg={3} className="mb-4">
     <Card className="card-hover" style={{ width: '14rem' }}>
@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         <p className="card-text">{description}</p>
-        <a href="/s" className="btn btn-primary">Learn More</a>
+        <a href=" " className="btn btn-primary">Learn More</a>
       </div>
     </Card>
   </Col>
@@ -47,34 +47,6 @@ export default function Hero() {
 
 
 <div style={{ marginTop: '30px' , marginRight: '20px'}}></div>
-{/* <div classNameName="container  mb-50"  >
-<div className="card-deck" >
-  <div className="card" style={{ width: '13 rem'}} >
-  <img className="card-img-top" src="https://i0.wp.com/hindisutra.com/wp-content/uploads/2020/07/types-of-bank-loan-in-hindi-bank-loan-types-in-hindi.jpg?fit=640%2C350&ssl=1" alt="Nature"/>
-    <div className="card-body ">
-      <h5 className="card-title"> Instant Loans</h5>
-      <p className="card-text">FINO Bank offers various loans like personal loan, home loan, vehicle loan & many more with lowest interest rates.</p>
-      <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div className="card" style={{ width: '13 rem'}}>
-  <img className="card-img-top" src="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2021/07/fixed-deposit-1627642644.jpg" alt="Nature"/>
-    <div className="card-body">
-      <h5 className="card-title">Fixed Deposit</h5>
-      <p className="card-text"> Get high returns on your savings with FINO FIRST Bank's FD account. Open an FD account today & enjoy benefits like up to 7.5% interest rate.</p>
-      <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div className="card"style={{ width: '13 rem'}}>
-    <img className="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5RPLqC8z5ZLwLk5jD8qDv3KXZ50KFLMTlmA&usqp=CAU" alt="nature"/>
-    <div className="card-body">
-      <h5 className="card-title">Home Loan</h5>
-      <p className="card-text">Get quick and easy home loans from FINO Bank at an attractive interest rate with minimal documentation. ... Product description. Transactional benefits</p>
-      <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-</div>
-</div> */}
 
 <>
 <div className="card-section">
@@ -96,7 +68,7 @@ export default function Hero() {
         <CustomCard
           title="Home Loan"
           image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5RPLqC8z5ZLwLk5jD8qDv3KXZ50KFLMTlmA&usqp=CAU"
-          description="Get quick and easy home loans from FINO Bank at an attractive interest rate with minimal documentation."
+          description="Get quick and easy home loans from Nidhi Bank at an attractive interest rate with minimal documentation."
         />
         <CustomCard
           title="Credit card"
@@ -110,12 +82,12 @@ export default function Hero() {
 <CustomCard
           title=" Instant Loans"
           image="https://i0.wp.com/hindisutra.com/wp-content/uploads/2020/07/types-of-bank-loan-in-hindi-bank-loan-types-in-hindi.jpg?fit=640%2C350&ssl=1"
-          description="FINO Bank offers various loans like personal loan, home loan, vehicle loan & many more with lowest interest rates."
+          description="Nidhi Bank offers various loans like personal loan, home loan, vehicle loan & many more with lowest interest rates."
         />
         <CustomCard
           title="Fixed Deposit"
           image="https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2021/07/fixed-deposit-1627642644.jpg"
-          description="Get high returns on your savings with FINO FIRST Bank's FD account. Open an FD account today & enjoy benefits."
+          description="Get high returns on your savings with Nidhi FIRST Bank's FD account. Open an FD account today & enjoy benefits."
         />
         <CustomCard
           title="ASSET BACKED LOAN"
@@ -125,7 +97,7 @@ export default function Hero() {
         <CustomCard
           title="Invest and Insurance"
           image="https://www.financialexpress.com/wp-content/uploads/2021/11/Insurance-9-1-620x400-1.jpg"
-          description="FINO Bank's team of professionals will help you choose the right investment and insurance solutions for you ."
+          description="Nidhi Bank's team of professionals will help you choose the right investment and insurance solutions for you ."
         />
       </Row>
     </Container>

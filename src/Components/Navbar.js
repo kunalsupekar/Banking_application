@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { NavDropdown } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { faUser,faHome} from '@fortawesome/free-solid-svg-icons';
 
 
 export default function Navbar({ isLoggedIn,user, handleLogout,isAdminLoggedIn,admin }) {
@@ -46,20 +46,13 @@ export default function Navbar({ isLoggedIn,user, handleLogout,isAdminLoggedIn,a
     </button>
     <div className="collapse navbar-collapse" id="navbarCollapse">
       <ul className="navbar-nav ml-auto ">
-{/*         
-      {isAdminLoggedIn && (
+      <li className="nav-item">
+              <Link className="nav-link" to="/">
+                <p> <FontAwesomeIcon icon={faHome}/> &nbsp;&nbsp;&nbsp;&nbsp;</p>
+             
+              </Link>
+            </li>
 
-        <>
-        <li className="nav-item">
-          <Link className="nav-link" aria-current="page" to="/view">View</Link>
-        </li>
-        <li className="nav-item"  >
-          <Link className="nav-link " to="/dashboard">Link</Link>
-        </li>
-        </>
-        )} */}
-
-       {/* Conditional rendering for Create Account */}
        {!isLoggedIn && !isAdminLoggedIn && (
             <li className="nav-item">
               <Link className="nav-link" to="/add">

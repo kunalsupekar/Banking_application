@@ -21,7 +21,7 @@ import AdminDashboard from './Components/AdminDashboard';
 function App() {
   const navigate = useNavigate();
   
-  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true');
+  const [isLoggedIn, setIsLoggedIn] = useState(sessionStorage.getItem('isLoggedIn') === 'true');
   const [user, setUser] = useState(null); // Initialize user state
   const[admin,setAdmin]=useState(null);
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
@@ -36,7 +36,7 @@ function App() {
     }
 
 
-    const storedUserData = localStorage.getItem('userData');
+    const storedUserData = sessionStorage.getItem('userData');
   try {
     if (storedUserData && storedUserData !== 'undefined') {
       setUser(JSON.parse(storedUserData));
@@ -49,7 +49,7 @@ function App() {
   }
 
 
-    const storedIsLoggedIn = localStorage.getItem('isLoggedIn');
+    const storedIsLoggedIn = sessionStorage.getItem('isLoggedIn');
     if (storedIsLoggedIn === 'true') {
       setIsLoggedIn(true);
     }
@@ -62,18 +62,17 @@ function App() {
      }, [navigate]);
 
 
-  const handleLogin = (userData) => {
-
-    console.log("call coming");
-    setIsLoggedIn(true);
-    localStorage.setItem('isLoggedIn', 'true');
-    localStorage.setItem('userData', JSON.stringify(userData));
-     setUser(userData); // Set the user data when the user logs in
-    navigate('/dashboard');
-    // Your login logic here
-  
-  };
-
+     const handleLogin = (userData) => {
+      setIsLoggedIn(true);
+      sessionStorage.setItem('isLoggedIn', 'true');
+      sessionStorage.setItem('userData', JSON.stringify(userData));
+      setUser(userData); // Set the user data when the user logs in
+    
+      // Store user data in session storage
+      sessionStorage.setItem('userDetails', JSON.stringify(userData));
+    
+      navigate('/dashboard');
+    };
 
   const handleAdminLogin = (userData) => {
     console.log("Admin login successful");
@@ -89,10 +88,10 @@ function App() {
   const handleLogout = () => {
     // Your logout logic he
     setIsLoggedIn(false);
-    // Clear the isLoggedIn state in localStorage
-    localStorage.removeItem('isLoggedIn');
+    // Clear the isLoggedIn state in sessionStorage
+    sessionStorage.removeItem('isLoggedIn');
     setUser(null);
-    localStorage.removeItem('userData');
+    sessionStorage.removeItem('userData');
     setAdmin(null);
     setIsAdminLoggedIn(false);
     sessionStorage.removeItem('isAdminLoggedIn'); // Remove isAdminLoggedIn from sessionStorage

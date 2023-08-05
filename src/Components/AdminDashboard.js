@@ -32,6 +32,14 @@ export default function AdminDashboard() {
                    All Customers
                  </Link>
                </li>
+
+               <li>
+                 <Link to=" " className="nav-link link-body-emphasis">
+                   <i className="fa fa-address-book me-2" />
+                  Loan Applications
+                 </Link>
+               </li>
+
                <li>
                  <Link to="transaction" className="nav-link link-body-emphasis">
                    <i className="fa fa-exchange me-2" />
@@ -41,7 +49,7 @@ export default function AdminDashboard() {
                <li>
                  <Link to="delete" className="nav-link link-body-emphasis">
                    <i className="fas fa-trash me-2" />
-                   Delete
+                   Delete User
                  </Link>
                </li>
              

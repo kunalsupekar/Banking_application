@@ -44,10 +44,10 @@ export default function Sidebar() {
             </Link>
           </li>
           <li>
-            <a href="/" className="nav-link link-body-emphasis">
+            <Link to="loan" className="nav-link link-body-emphasis">
               <i className="fa  fa-hand-holding-usd me-2" />
               Loan & insurances
-            </a>
+            </Link>
           </li>
           <li>
             <a href="/" className="nav-link link-body-emphasis">

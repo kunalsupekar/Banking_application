@@ -24,22 +24,22 @@ export default function Footer() {
           <span>Get connected with us on social networks:</span>
         </div>
         <div>
-          <a href="/" className="me-4 text-reset">
+          <a href=" " className="me-4 text-reset">
             <FontAwesomeIcon icon={faFacebookF} />
           </a>
-          <a href="/" className="me-4 text-reset">
+          <a href=" " className="me-4 text-reset">
             <FontAwesomeIcon icon={faTwitter} />
           </a>
-          <a href="/" className="me-4 text-reset">
+          <a href=" " className="me-4 text-reset">
             <FontAwesomeIcon icon={faGoogle} />
           </a>
-          <a href="/" className="me-4 text-reset">
+          <a href=" " className="me-4 text-reset">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
-          <a href="/" className="me-4 text-reset">
+          <a href=" " className="me-4 text-reset">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
-          <a href="/" className="me-4 text-reset">
+          <a href=" " className="me-4 text-reset">
             <FontAwesomeIcon icon={faGithub} />
           </a>
         </div>
@@ -61,37 +61,37 @@ export default function Footer() {
             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">About Us</h6>
               <p>
-                <a href="/" className="text-reset">
+                <a href=" " className="text-reset">
                   Overview
                 </a>
               </p>
               <p>
-                <a href="/" className="text-reset">
+                <a href=" " className="text-reset">
                   History
                 </a>
               </p>
               <p>
-                <a href="/" className="text-reset">
+                <a href=" " className="text-reset">
                   Offices & Branches
                 </a>
               </p>
               <p>
-                <a href="/" className="text-reset">
+                <a href=" " className="text-reset">
                   Awards
                 </a>
               </p>
               <p>
-                <a href="/" className="text-reset">
+                <a href=" " className="text-reset">
                   Human Resources
                 </a>
               </p>
               <p>
-                <a href="/" className="text-reset">
+                <a href=" " className="text-reset">
                   Overview
                 </a>
               </p>
               <p>
-                <a href="/" className="text-reset">
+                <a href=" " className="text-reset">
                   News Room
                 </a>
               </p>
@@ -100,33 +100,33 @@ export default function Footer() {
             <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">Calculators</h6>
               <p>
-                <a href="/" className="text-reset">
+                <a href=" " className="text-reset">
                   Personal Loan EMI
                 </a>
               </p>
               <p>
-                <a href="/" className="text-reset">
+                <a href=" " className="text-reset">
                   Car Loan EMI
                 </a>
               </p>
               <p>
-                <a href="/" className="text-reset">
+                <a href=" " className="text-reset">
                   Fixed Deposit
                 </a>
               </p>
               <p>
-                <a href="/" className="text-reset">
+                <a href=" " className="text-reset">
                   Home Loan
                 </a>
               </p>
               <p>
-                <a href="/" className="text-reset">
+                <a href=" " className="text-reset">
                   Business Loan
                 </a>
               </p>
               <p>
                 
-                <a href="/" className="text-reset">
+                <a href=" " className="text-reset">
                   Loan Balance Transfer Calculator
                 </a>
               </p>
