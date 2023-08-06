@@ -34,7 +34,7 @@ export default function ViewCustomers() {
   
     return (
     <>
-     <main className="container" style={{ overflow: 'auto' }}>
+     <main className="container" style={{ overflow: 'auto' ,marginTop:'100px'}}>
   <div className="bg-body-tertiary p-5 rounded"   style={{ overflow: 'auto' }}>
   <table class="table table-fixed">
   <thead>
@@ -49,7 +49,7 @@ export default function ViewCustomers() {
       <th scope="col">Email</th>
       <th scope="col">Balance</th>
       <th scope="col">Mobile</th>
-      <th scope="col">Password</th>
+      {/* <th scope="col">Password</th> */}
       {/* <th scope="col">Pin</th> */}
      
     </tr>
@@ -67,7 +67,7 @@ export default function ViewCustomers() {
         <td>{kunal.email}</td>
         <td>{kunal.balance}</td>
         <td>{kunal.mobile}</td>
-        <td>{kunal.password}</td>
+        {/* <td>{kunal.password}</td> */}
         {/* <td>{kunal.pin}</td> */}
         
         

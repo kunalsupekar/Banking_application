@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import base_url1 from '../API/URL';
 
-
-
 export default function AdminLoans() {
   const [loanApplications, setLoanApplications] = useState([]);
 
@@ -15,7 +13,7 @@ export default function AdminLoans() {
   const fetchLoanApplications = () => {
     // Make an HTTP GET request to fetch loan applications from the backend using Axios
     axios
-    .get(`${base_url1}/getadminloans`)// Replace '/api/loans' with the appropriate API endpoint
+      .get(`${base_url1}/getadminloans`)
       .then((response) => {
         // Set the fetched data in the component's state
         setLoanApplications(response.data);
@@ -26,17 +24,57 @@ export default function AdminLoans() {
   };
 
   const handleApprove = (id) => {
+    // Show the confirmation dialog
+    const confirmed = window.confirm('Are you sure you want to approve this loan application?');
+    if (!confirmed) {
+      return; // Do nothing if the user cancels the action
+    }
+
     // Handle the approval logic here
     // You can make an HTTP PUT or POST request to update the loan application status
     // Example:
-    // axios.put(`/api/loans/${id}`, { status: 'approved' });
+    axios
+      .put(`${base_url1}/loans/${id}`, { status: 'approved' })
+      .then((response) => {
+        // Handle the response if needed
+        console.log('Loan application approved:', response.data);
+        // Update the loanApplications state to reflect the changed status
+        setLoanApplications((prevApplications) =>
+          prevApplications.map((application) =>
+            application.srno === id ? { ...application, status: 'approved' } : application
+          )
+        );
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
   };
 
   const handleReject = (id) => {
+    // Show the confirmation dialog
+    const confirmed = window.confirm('Are you sure you want to reject this loan application?');
+    if (!confirmed) {
+      return; // Do nothing if the user cancels the action
+    }
+
     // Handle the rejection logic here
     // You can make an HTTP PUT or POST request to update the loan application status
     // Example:
-    // axios.put(`/api/loans/${id}`, { status: 'rejected' });
+    axios
+      .put(`${base_url1}/loans/${id}`, { status: 'rejected' })
+      .then((response) => {
+        // Handle the response if needed
+        console.log('Loan application rejected:', response.data);
+        // Update the loanApplications state to reflect the changed status
+        setLoanApplications((prevApplications) =>
+          prevApplications.map((application) =>
+            application.srno === id ? { ...application, status: 'rejected' } : application
+          )
+        );
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
   };
 
   const containerStyles = {
@@ -67,31 +105,33 @@ export default function AdminLoans() {
           </tr>
         </thead>
         <tbody>
-          {loanApplications.map((application) => (
-            <tr key={application.id}>
-              <td>{application.userid}</td>
-              <td>{application.accountno}</td>
-              <td>{application.name}</td>
-              <td>{application.amount}</td>
-              <td>{application.existingloan}</td>
-              <td>{application.loantype}</td>
-              <td>{application.income}</td>
-              <td>
-                <button
-                  className="btn btn-success mx-1"
-                  onClick={() => handleApprove(application.id)}
-                >
-                  Approve
-                </button>
-                <button
-                  className="btn btn-danger"
-                  onClick={() => handleReject(application.id)}
-                >
-                  Reject
-                </button>
-              </td>
-            </tr>
-          ))}
+          {loanApplications
+            .filter((application) => application.status === null) // Filter applications with null status
+            .map((application) => (
+              <tr key={application.srno}>
+                <td>{application.srno}</td>
+                <td>{application.accountno}</td>
+                <td>{application.name}</td>
+                <td>{application.amount}</td>
+                <td>{application.existingloan}</td>
+                <td>{application.loantype}</td>
+                <td>{application.income}</td>
+                <td>
+                  <button
+                    className="btn btn-success mx-1"
+                    onClick={() => handleApprove(application.srno)}
+                  >
+                    Approve
+                  </button>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() => handleReject(application.srno)}
+                  >
+                    Reject
+                  </button>
+                </td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>
