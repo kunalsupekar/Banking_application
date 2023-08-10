@@ -3,34 +3,38 @@ import axios from 'axios';
 import base_url1 from '../API/URL';
 import { Link } from 'react-router-dom';
 import { Person, Key } from 'react-bootstrap-icons';
+import LoadingSpinner from './LoadingSpinner';
 
 
 export default function Login({ handleLogin}) {
   
   const [accountno, setAccountno] = useState('');
   const [password, setPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
  
 
 
 
   const handleLogin1 = (e) => {
      e.preventDefault();
+     setIsLoading(true);
 
     // Make a POST request to your login endpoint
     axios
       .post(`${base_url1}/login`, { accountno, password })
       .then((response) => {
-        // setLoggedIn(true);
+     
         console.log(response);
         if (response.data) {
-          //setIsLoggedIn(true);
-         // localStorage.setItem('isLoggedIn', 'true');
+          setIsLoading(false);
          handleLogin(response.data);
+        
 
 
           
         } else {
           alert('Invaliad Credetainls. Please try again.');
+          setIsLoading(false);
           
          
         }
@@ -40,6 +44,7 @@ export default function Login({ handleLogin}) {
         // Handle login error
         console.error(error);
         alert('Error while connecting to the API. Please try again later.');
+        setIsLoading(false);
 
       
       });
@@ -65,6 +70,14 @@ export default function Login({ handleLogin}) {
   return (
     <div className="container" style={{ width: '800px', height: '420px', display: 'flex', justifyContent: 'center', 
     alignItems: 'center',marginBottom:'200px',marginTop:'120px' }}>
+
+
+
+    {isLoading && (
+      <LoadingSpinner label="Wait we are logging.." />
+)}
+
+
     <div className="container d-flex justify-content-center align-items-center vh-70" >
       <form className="login-form p-4 rounded shadow" onSubmit={handleLogin1}>
         <h2 className="text-center mb-4">Welcome User</h2>

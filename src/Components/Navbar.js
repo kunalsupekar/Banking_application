@@ -95,6 +95,7 @@ export default function Navbar({ isLoggedIn,user, handleLogout,isAdminLoggedIn,a
         )}
 
 
+
 {/* condition for admin login */}
 
 {isAdminLoggedIn && admin && (

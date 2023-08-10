@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import axios from 'axios';
 import base_url1 from '../API/URL';
+import LoadingSpinner from './LoadingSpinner';
 
 export default function AddCustomer() {
 
@@ -70,6 +71,7 @@ const handleChange=(event)=>{
       <input type="text" className="form-control" id="id"
       name="id"
       onChange={handleChange}
+      required
       />
     </div>
 
@@ -77,12 +79,7 @@ const handleChange=(event)=>{
 {/* loading spinner */}
 
     {loading && (
-  <div className="d-flex justify-content-center">
-  <button className="btn btn-primary text-center" type="button" disabled>
-    <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-      Creating...
-  </button>
-</div>
+      <LoadingSpinner label="Creating your account..." />
 
 )}
 
