@@ -5,9 +5,9 @@ import Headerdashboard from '../Dashboard_components/Headerdashboard';
 import Transfer from '../Dashboard_components/Transfer';
 import { Route, Routes } from 'react-router-dom';
 import Transaction from '../Dashboard_components/Transaction';
-
-import RazorpayForm from '../Dashboard_components/RazorpayForm';
+// import RazorpayForm from '../ponents/RazorpayForm';
 import LoanForm from '../Dashboard_components/LoanForm';
+import Pay from './Pay';
 
 
 const Dashboard = ({user}) => {
@@ -21,7 +21,7 @@ const Dashboard = ({user}) => {
      <Routes>
      <Route path="/transfer" element={<Transfer />} />
      <Route path="/transaction" element={<Transaction/>} />
-     <Route path="/deposit" element={<RazorpayForm/>} />
+     <Route path="/deposit" element={<Pay/>} />
      <Route path="/loan" element={<LoanForm/>} />
      </Routes>
 

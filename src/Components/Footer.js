@@ -15,6 +15,7 @@ import {
   faLinkedin,
   faGithub
 } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -100,9 +101,9 @@ export default function Footer() {
             <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">Calculators</h6>
               <p>
-                <a href=" " className="text-reset">
-                  Personal Loan EMI
-                </a>
+                <Link to="/calci" className="text-reset">
+                  Calculator
+                </Link>
               </p>
               <p>
                 <a href=" " className="text-reset">

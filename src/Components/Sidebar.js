@@ -31,12 +31,12 @@ export default function Sidebar() {
               Transactions
             </Link>
           </li>
-          <li>
+          {/* <li>
             <a href="/" className="nav-link link-body-emphasis">
               <i className="fas fa-credit-card me-2" />
               Credit-Cards
             </a>
-          </li>
+          </li> */}
           <li>
             <Link to="deposit" className="nav-link link-body-emphasis">
               <i  className="fa-solid fa-money-bill-transfer "/>
@@ -49,12 +49,12 @@ export default function Sidebar() {
               Loan & insurances
             </Link>
           </li>
-          <li>
-            <a href="/" className="nav-link link-body-emphasis">
+          {/* <li>
+            <a href="/." className="nav-link link-body-emphasis">
               <i className="fa fa-money me-2" />
               Bill & recharge
             </a>
-          </li>
+          </li> */}
           <li>
             <a href="/" className="nav-link link-body-emphasis">
               <i className="fa fa-download me-2" />

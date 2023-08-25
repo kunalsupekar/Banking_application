@@ -140,9 +140,9 @@ export default function Login({ handleLogin}) {
               </label>
             </div>
           </div>
-          <div className="col text-right">
+          {/* <div className="col text-right">
             <Link to="/">Forgot password?</Link>
-          </div>
+          </div> */}
         </div>
 
         <button type="submit" className="btn btn-primary btn-block mb-4">

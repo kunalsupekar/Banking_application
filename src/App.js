@@ -102,6 +102,7 @@ function App() {
   return (
     <>
     
+    
 <Navbar isLoggedIn={isLoggedIn}  isAdminLoggedIn={isAdminLoggedIn} 
 user={user} handleLogout={handleLogout}  admin={admin} />
 
@@ -116,7 +117,6 @@ user={user} handleLogout={handleLogout}  admin={admin} />
   <Route exact path='/view' element={<ViewCustomers/>}></Route>
   <Route exact path='/login' element={<Login setIsLoggedIn={setIsLoggedIn} handleLogin={handleLogin} />}></Route>
   <Route exact path='/load' element={<LoadingAnimation/>}></Route>
-  {/* <Route exact path='/transfer' element={<Transfer/>}></Route> */}
 
   </Routes>
 
